@@ -41,60 +41,13 @@ struct MainView: View {
             .alert(viewModel.errorMessage, isPresented: $viewModel.showAlert) {}
         }
     }
-    
-    var bottomContainer: some View {
-        HStack {
-            Button(action: {
-                showFavoriteMovies = false
-            }, label: {
-                Image(systemName: "house.circle.fill")
-                    .resizable()
-                    .scaledToFit()
-            })
-            .frame(maxWidth: .infinity)
-            
-            Button(action: {
-                showFavoriteMovies = true
-            }, label: {
-                Image(systemName: "cart.circle.fill")
-                    .resizable()
-                    .scaledToFit()
-            })
-            .frame(maxWidth: .infinity)
-                .foregroundColor(.secondary)
-        }
-        .frame(height: 48)
-        .padding()
-        .background(Color.white)
-        .clipShape(RoundedRectangle(cornerRadius: 24))
-    }
-    
+
     var profileButtonView: some View {
         Button {
             
         } label: {
             Image(systemName: "person.circle.fill")
                 .foregroundStyle(Color.gray.opacity(0.5))
-        }
-    }
-    
-    var bannerView: some View {
-        ZStack {
-            if let bannerList = viewModel.movieList?.bannerList {
-                ScrollView(.horizontal) {
-                    HStack(spacing: 10) {
-                        ForEach(bannerList) { movie in
-                            if let imageURL = movie.imageURL {
-                                AsyncImage(url: imageURL)
-                                    .scaledToFill()
-                                    .frame(width: 100, height: 100)
-                                    .padding()
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
     
@@ -131,6 +84,53 @@ struct MainView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 8, style: .circular))
             }
         }
+    }
+    
+    var bannerView: some View {
+        ZStack {
+            if let bannerList = viewModel.movieList?.bannerList {
+                ScrollView(.horizontal) {
+                    HStack(spacing: 10) {
+                        ForEach(bannerList) { movie in
+                            if let imageURL = movie.imageURL {
+                                AsyncImage(url: imageURL)
+                                    .scaledToFill()
+                                    .frame(width: 100, height: 100)
+                                    .padding()
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    var bottomContainer: some View {
+        HStack {
+            Button(action: {
+                showFavoriteMovies = false
+            }, label: {
+                Image(systemName: "house.circle.fill")
+                    .resizable()
+                    .scaledToFit()
+            })
+            .frame(maxWidth: .infinity)
+            
+            Button(action: {
+                showFavoriteMovies = true
+            }, label: {
+                Image(systemName: "cart.circle.fill")
+                    .resizable()
+                    .scaledToFit()
+            })
+            .frame(maxWidth: .infinity)
+            .foregroundColor(.secondary)
+        }
+        .frame(height: 36)
+        .padding()
+        .background(Color.white)
+        .clipShape(RoundedRectangle(cornerRadius: 24))
     }
 }
 
