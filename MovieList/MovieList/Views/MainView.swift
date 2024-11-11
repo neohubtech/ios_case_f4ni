@@ -123,6 +123,7 @@ struct MainView: View {
                 Image(systemName: "cart.circle.fill")
                     .resizable()
                     .scaledToFit()
+                    .badge(count: viewModel.savedMovie.count)
             })
             .frame(maxWidth: .infinity)
             .foregroundColor(.secondary)
