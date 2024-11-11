@@ -1,0 +1,71 @@
+{
+  "bannerList": [
+    {
+      "imageUrl": "https://image.tmdb.org/t/p/w220_and_h330_face/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+      "name": "Banner Image 1"
+    },
+    {
+      "imageUrl": "https://image.tmdb.org/t/p/w220_and_h330_face/1WZbbPApEivA421gCOluuzMMKCk.jpg",
+      "name": "Banner Image 2"
+    },
+    {
+      "imageUrl": "https://image.tmdb.org/t/p/w220_and_h330_face/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+      "name": "Banner Image 3"
+    },
+    {
+      "imageUrl": "https://image.tmdb.org/t/p/w220_and_h330_face/eeJjd9JU2Mdj9d7nWRFLWlrcExi.jpg",
+      "name": "Banner Image 4"
+    }
+  ],
+  "combinedList": [
+    {
+      "imageUrl": "https://image.tmdb.org/t/p/w220_and_h330_face/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+      "type": "Type A",
+      "name": "Item 1",
+      "explanation": "This is the first item of Type A"
+    },
+    {
+      "imageUrl": "https://image.tmdb.org/t/p/w220_and_h330_face/fiVW06jE7z9YnO4trhaMEdclSiC.jpg",
+      "type": "Type A",
+      "name": "Item 2",
+      "explanation": "This is the second item of Type A"
+    },
+    {
+      "imageUrl": "https://image.tmdb.org/t/p/w220_and_h330_face/mBaXZ95R2OxueZhvQbcEWy2DqyO.jpg",
+      "type": "Type B",
+      "name": "Item 3",
+      "explanation": "This is the third item of Type B"
+    },
+    {
+      "imageUrl": "https://image.tmdb.org/t/p/w220_and_h330_face/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+      "type": "Type B",
+      "name": "Item 4",
+      "explanation": "This is the fourth item of Type B"
+    },
+    {
+      "imageUrl": "https://image.tmdb.org/t/p/w220_and_h330_face/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+      "type": "Type C",
+      "name": "Item 5",
+      "explanation": "This is the fifth item of Type C"
+    },
+    {
+      "imageUrl": "https://image.tmdb.org/t/p/w220_and_h330_face/5weKu49pzJCt06OPpjvT80efnQj.jpg",
+      "type": "Type C",
+      "name": "Item 6",
+      "explanation": "This is the sixth item of Type C"
+    },
+    {
+      "imageUrl": "https://image.tmdb.org/t/p/w220_and_h330_face/rktDFPbfHfUbArZ6OOOKsXcv0Bm.jpg",
+      "type": "Type D",
+      "name": "Item 7",
+      "explanation": "This is the seventh item of Type D"
+    },
+    {
+      "imageUrl": "https://image.tmdb.org/t/p/w220_and_h330_face/ksQ8uNgoWsVH6a0oPB6zx08pOwU.jpg",
+      "type": "Type D",
+      "name": "Item 8",
+      "explanation": "This is the eighth item of Type D"
+    }
+  ]
+}
+ 
