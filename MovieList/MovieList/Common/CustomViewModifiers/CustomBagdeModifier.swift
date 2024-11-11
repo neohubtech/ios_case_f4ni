@@ -1,3 +1,12 @@
+//
+//  CustomBagdeModifier.swift
+//  MovieList
+//
+//  Created by Furkan ic on 11.11.2024.
+//
+
+import SwiftUI
+
 
 struct CustomBagdeModifier: ViewModifier {
     
