@@ -6,19 +6,26 @@
 //
 
 import Foundation
+import Alamofire
 
 final class NetworkClient {
     
-    let urlSession = URLSession.shared
+    var session = Session.default
     
     func send<T: Decodable>(_ request: NetworkRequest, _ type: T.Type = T.self) async throws -> T {
-        let urlRequest = request.urlRequest
+        let urlRequest = try request.urlRequest()
         
-        let (data, response) = try await urlSession.data(for: urlRequest())
+        let dataResponse = await session.request(urlRequest)
+            .validate(statusCode: 200..<300)
+            .serializingData()
+            .response
+        
+        guard let data = dataResponse.data, let response = dataResponse.response else {
+            throw NetworkError.unknown
+        }
         
         // Handle network response errors
         try handleNetworkResponse(data: data, response: response)
-        
         
         do {
             return try decode(from: data)
@@ -32,26 +39,18 @@ final class NetworkClient {
     }
     
     private func handleNetworkResponse(data: Data?, response: URLResponse?) throws {
-        
+    
         guard let httpResponse = response as? HTTPURLResponse else {
             throw NetworkError.unknown
         }
-        
+
         guard (200...299).contains(httpResponse.statusCode) else {
             let errorMessage = try? JSONDecoder().decode(ServerError.self, from: data ?? Data())
             throw NetworkError.serverError(httpResponse.statusCode, errorMessage?.message)
         }
-        
+
         guard data != nil else {
             throw NetworkError.invalidUrl
         }
     }
-}
-
-public struct ErrorModel: Codable, Equatable, Hashable {
-    let timestamp: UInt
-    let status: Int
-    let error: String
-    let message: String
-    let path: String
 }
