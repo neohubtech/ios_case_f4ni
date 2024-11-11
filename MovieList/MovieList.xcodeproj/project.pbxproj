@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9A440E112CE28D8A0045CD2E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9A440E102CE28D8A0045CD2E /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		9A800F6E2CE0A0C7000C86A1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A440E112CE28D8A0045CD2E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = MovieList;
 			packageProductDependencies = (
+				9A440E102CE28D8A0045CD2E /* Alamofire */,
 			);
 			productName = MovieList;
 			productReference = 9A800F5D2CE0A0C6000C86A1 /* MovieList.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = 9A800F542CE0A0C6000C86A1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				9A440E0F2CE28D8A0045CD2E /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9A800F5E2CE0A0C6000C86A1 /* Products */;
 			projectDirPath = "";
@@ -558,6 +567,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9A440E0F2CE28D8A0045CD2E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9A440E102CE28D8A0045CD2E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A440E0F2CE28D8A0045CD2E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9A800F552CE0A0C6000C86A1 /* Project object */;
 }
