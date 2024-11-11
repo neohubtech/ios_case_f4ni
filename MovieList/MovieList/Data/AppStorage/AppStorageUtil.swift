@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 
-class AppStorageUtil: ObservableObject {
+final class AppStorageUtil: ObservableObject {
     @AppStorage("savedMovies") var savedMovies: Data = .init() {
         didSet {
             objectWillChange.send()

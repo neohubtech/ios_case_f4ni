@@ -8,7 +8,7 @@ import SwiftUI
 import Combine
 
 
-class ViewModel: ObservableObject {
+final class ViewModel: ObservableObject {
     
     @ObservedObject var appStorageUtil = AppStorageUtil()
     var repository: MoviesRepositoryInterface
